@@ -1,3 +1,10 @@
 <!-- ENVIANDO VALORES STRING PARA AS PROPRIEDADES url E description, do componente ap-photo -->
-<ap-photo url="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" description="Google"></ap-photo>
-<ap-photo url="https://play-lh.googleusercontent.com/KwUBNPbMTk9jDXYS2AeX3illtVRTkrKVh5xR1Mg4WHd0CG2tV4mrh1z3kXi5z_warlk" description="Chrome"></ap-photo>
+<!-- <ap-photo url="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" description="Google"></ap-photo>
+<ap-photo url="https://play-lh.googleusercontent.com/KwUBNPbMTk9jDXYS2AeX3illtVRTkrKVh5xR1Mg4WHd0CG2tV4mrh1z3kXi5z_warlk" description="Chrome"></ap-photo> -->
+
+<!-- ATUALIZAÇÃO PARA A DIRETIVA *ngFor, rodando o array de photos definido no componente -->
+<ap-photo
+  *ngFor="let photo of photos"
+  [url]="photo.url"
+  [description]="photo.description">
+</ap-photo>
